@@ -5,11 +5,22 @@
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  
+
   </head>
 
   <body>
     <%= render 'layouts/navigation' %>
+
+    <div class="container">
+      <% if flash[:success] %>
+            <div class="alert alert-success">
+               <%= flash[:success] %>
+            </div>
+
+      <% end %>
+    </div>
+
+
     <%= yield %>
     <%= render 'layouts/footer' %>
 

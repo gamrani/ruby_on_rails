@@ -10,7 +10,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.valid?
-      render 'new'
+      @user.save
+      redirect_to new_user_path, success: 'votre compte a bien été créer'
     else
      render 'new'
     end
