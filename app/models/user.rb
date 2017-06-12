@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :cours
 
   validates :username, format:{with:/\A[a-zA-Z0-9]{2,20}\z/,message: 'ne doit contenir que des caractéres alphanumeriques / underscore' } ,uniqueness: {case_sensative: false}, presence: true
 
