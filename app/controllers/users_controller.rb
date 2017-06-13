@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
     if @user.valid?
       @user.save
-      redirect_to new_user_path, success: 'votre compte a bien été créer'
+      redirect_to root_path, success: 'votre compte a bien été créer'
     else
      render 'new'
     end
