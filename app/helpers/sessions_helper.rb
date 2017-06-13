@@ -18,4 +18,12 @@ def log_out
 	session.delete(:user_id)
 	@user_courant=nil
 end
+# acces des etudiants à l'ensemble des cours
+ def acceder_aux_cours
+    if @user_courant.try(:statut)!="Etudiant"
+    	flash[:erreur]="Erreur, epace etudiants"
+    	return redirect_to request.reffer || "/users/acces_home"
+    end
+    @cours=Cour.all
+  end
 end
