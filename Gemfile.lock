@@ -68,7 +68,12 @@ GEM
     erubi (1.6.0)
     execjs (2.7.0)
     ffi (1.9.18)
+<<<<<<< HEAD
     ffi (1.9.18-x86-mingw32)
+=======
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
+>>>>>>> 711409b35c8a46522679f86d595946cb93472812
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.4)
@@ -195,6 +200,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  font-awesome-sass
   jbuilder (~> 2.5)
   jquery-rails
   listen (= 3.1.1)
@@ -213,4 +219,8 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.14.6
+=======
+   1.15.1
+>>>>>>> 711409b35c8a46522679f86d595946cb93472812

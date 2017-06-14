@@ -20,9 +20,9 @@ def log_out
 end
 # acces des etudiants à l'ensemble des cours
  def acceder_aux_cours
-    if @user_courant.try(:statut)!="Etudiant"
-    	flash[:erreur]="Erreur, epace etudiants"
-    	return redirect_to request.reffer || "/users/acces_home"
+    if !@user_courant
+    	flash[:erreur]="Vous n'êtes pas connecté"
+    	return redirect_to request.reffer || "/users/home"
     end
     @cours=Cour.all
   end
