@@ -44,10 +44,16 @@
           <div class="col-md-6">
             <%= f.password_field :password_confirmation,class:'form-control' %>
             <br>
+            <%= f.label :statut %><br>
+            <%= f.label :professeur %>
+            <%= radio_button  :statut, :professeur, 'true' %>
+            <%= f.label :etudiant %>
+            <%= radio_button  :statut, :etudiant, 'false' %>
+            <br>
             <div class="colr-md-6 col-md-offset-4">
                 <%= f.submit "S'inscrire" ,class: 'btn btn-primary' %>
             </div>
-    
+
 
           </div>
 
