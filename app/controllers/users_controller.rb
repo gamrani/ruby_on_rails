@@ -6,9 +6,7 @@ class UsersController < ApplicationController
     @user=User.new
   end
 
-  def showMyCourse
-     
-  end
+
 
   def create
     user_params = params.require(:user).permit(:username,:email,:password,:password_confirmation)
