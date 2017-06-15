@@ -3,13 +3,9 @@
 <% provide(:title, "Log in") %>
 
 <br/><br/>
+<h1>Log in</h1>
 
 <div class="row">
-  <div class="container">
-    <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= message_type %>"><%= message %></div>
-        <% end %>
-  </div>
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(:session, url: login_path) do |f| %>
 
@@ -18,10 +14,6 @@
 
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :statut %>
-      <%= radio_button  :statut, :professeur, 'true' %>
-      <%= radio_button  :statut, :etudiant, 'false' %>
 
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
