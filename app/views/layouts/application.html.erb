@@ -3,26 +3,29 @@
   <head>
     <title>Site</title>
     <%= csrf_meta_tags %>
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
     <%= render 'layouts/stylesheet' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
   <body>
-    <%= render 'layouts/navigation' %>
-
-    <div class="container">
 
 
+
+<<<<<<< HEAD
     <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
         <% end %>
 
     </div>
 
+=======
+>>>>>>> 1d8cab210502431b861031e54846f2b88dbbd0da
 
+   <%= render 'layouts/navigation' %>
 
+   
     <%= yield %>
     <%= render 'layouts/footer' %>
 

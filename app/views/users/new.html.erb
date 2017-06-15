@@ -1,20 +1,22 @@
-<% if @user.errors.any? %>
 
-  <div class="alert alert-danger">
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-        <li> <%= message %></li>
-        <% end %>
-      </ul>
-  </div>
-
-<% end %>
 <div class="panel panel-default">
 
  <div class="panel-heading">
     Formulaire d'inscription
  </div>
  <div class="panel-body">
+   <br><br>
+   <% if @user.errors.any? %>
+
+     <div class="alert alert-danger">
+         <ul>
+           <% @user.errors.full_messages.each do |message| %>
+           <li> <%= message %></li>
+           <% end %>
+         </ul>
+     </div>
+
+   <% end %>
       <%= form_for @user,class: 'form-horizontal' do |f| %>
 
           <div class="form-group">

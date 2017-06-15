@@ -1,0 +1,50 @@
+
+<div class="panel panel-default">
+
+ <div class="panel-heading">
+    Formulaire d'inscription
+ </div>
+ <div class="panel-body">
+   <br><br>
+   <% if @cours.errors.any? %>
+
+     <div class="alert alert-danger">
+         <ul>
+           <% @cours.errors.full_messages.each do |message| %>
+           <li> <%= message %></li>
+           <% end %>
+         </ul>
+     </div>
+
+   <% end %>
+      <%= form_for @cours,class: 'form-horizontal' do |f| %>
+
+
+
+          <div class="form-group">
+            <%= f.label :titre,  "Titre",class:'col-md-4 control-label' %>
+          </div>
+          <div class="col-md-6">
+            <%= f.text_field :titre,class:'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :content, "Contenue",class:'col-md-4 control-label' %>
+          </div>
+          <div class="col-md-6">
+            <%= f.text_area :content,class:'form-control' %>
+          </div>
+
+
+
+
+          </div>
+          <div class="colr-md-6 col-md-offset-4">
+              <%= f.submit "VALIDER" ,class: 'btn btn-primary' %>
+          </div>
+
+
+       <% end %>
+ </div>
+
+</div>
