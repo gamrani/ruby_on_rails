@@ -1,0 +1,2 @@
+module EtudiantsCoursProfsHelper
+end
