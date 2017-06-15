@@ -10,14 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170613214630) do
+=======
+ActiveRecord::Schema.define(version: 20170615010311) do
+>>>>>>> 1d8cab210502431b861031e54846f2b88dbbd0da
 
   create_table "cours", force: :cascade do |t|
     t.text "content"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_cours_on_user_id"
+    t.string "titre"
   end
 
   create_table "users", force: :cascade do |t|

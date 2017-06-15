@@ -9,7 +9,7 @@ class CourTest < ActiveSupport::TestCase
     @user = User.new(:username => 'michael',:email => 'test@example.com', :password => 'password', :password_confirmation => 'password')
     @user.save
     # This code is not idiomatically correct.
-    @cours = Cour.new(content: "Lorem ipsum", user_id: @user.id)
+    @cours = Cour.new(content: "Lorem ipsum")
   end
 
   test "should be valid" do
@@ -17,7 +17,7 @@ class CourTest < ActiveSupport::TestCase
   end
 
   test "user id should be present" do
-    @cours.user_id = nil
+    
     assert_not @cours.valid?
   end
 

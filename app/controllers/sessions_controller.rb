@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
   		user.authenticate(params[:session][:password])
        # Log the user in and redirect to the user's show page.
        log_in user
+       
        redirect_to root_path
      else
        # Create an error message.

@@ -12,5 +12,9 @@ Rails.application.routes.draw do
     post   '/login',   to: 'sessions#create'
     get '/logout',  to: 'sessions#destroy'
     get '/edit', to: 'users#edit'
+    get '/profesor', to: 'cours#profesor'
+    get 'mes_cours', to:'users#showMyCourse'
     resources :users
+    resources :cours, only: [:create, :destroy,:new,:edit]
+
 end
